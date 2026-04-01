@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import './index.css'
+import Sidebar from "./components/layout/Sidebar";
+import Topbar from "./components/layout/Topbar";
 
 function App() {
-  
-
-  return <>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-  </>
+  return (
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-1 bg-gray-100 min-h-screen">
+        <Topbar />
+        <div className="p-4">Dashboard Content</div>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
